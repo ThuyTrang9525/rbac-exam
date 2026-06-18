@@ -2,6 +2,8 @@ apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sDisallowLatestTag
 metadata:
   name: deny-latest
+  annotations:                             # <-- THÊM ĐOẠN NÀY
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   match:
     kinds:

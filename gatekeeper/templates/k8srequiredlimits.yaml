@@ -7,6 +7,8 @@ spec:
     spec:
       names:
         kind: K8sRequiredLimits
+        annotations:                             # <-- THÊM ĐOẠN NÀY
+          argocd.argoproj.io/sync-wave: "-5"     # <-- THÊM ĐOẠN NÀY
       validation:
         openAPIV3Schema:
           type: object

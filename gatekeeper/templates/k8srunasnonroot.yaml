@@ -7,6 +7,8 @@ spec:
     spec:
       names:
         kind: K8sRunAsNonRoot
+        annotations:                             # <-- THÊM ĐOẠN NÀY
+          argocd.argoproj.io/sync-wave: "-5"     # <-- THÊM ĐOẠN NÀY
 
   targets:
     - target: admission.k8s.gatekeeper.sh
