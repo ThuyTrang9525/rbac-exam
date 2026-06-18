@@ -9,7 +9,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ThuyTrang9525/rbac.git
+    repoURL: https://github.com/ThuyTrang9525/rbac-exam.git
     path: app-api
     targetRevision: main
   destination:
