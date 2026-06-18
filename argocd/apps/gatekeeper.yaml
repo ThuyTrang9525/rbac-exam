@@ -10,7 +10,7 @@ spec:
 
   source:
     repoURL: https://github.com/open-policy-agent/gatekeeper.git
-    targetRevision: v3.20.1
+    targetRevision: v3.14.0
     path: manifest
 
   destination:
