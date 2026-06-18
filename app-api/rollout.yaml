@@ -24,7 +24,7 @@ spec:
         runAsUser: 1000
       containers:
       - name: api
-        image: ghcr.io/ThuyTrang9525/w10-api:0.0.2
+        image: ghcr.io/thuytrang9525/w10-api:0.0.2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
