@@ -1,0 +1,19 @@
+apiVersion: templates.gatekeeper.sh/v1
+kind: ConstraintTemplate
+metadata:
+  name: k8snohostnetwork
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sNoHostNetwork
+
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8snohostnetwork
+
+        violation[{"msg": msg}] {
+          input.review.object.spec.template.spec.hostNetwork == true
+          msg := "hostNetwork=true is forbidden"
+        }

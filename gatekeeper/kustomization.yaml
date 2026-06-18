@@ -1,0 +1,10 @@
+resources:
+  - templates/k8srequiredlimits.yaml
+  - templates/k8sdisallowlatesttag.yaml
+  - templates/k8srunasnonroot.yaml
+  - templates/k8snohostnetwork.yaml
+
+  - constraints/require-limits.yaml
+  - constraints/deny-latest.yaml
+  - constraints/deny-root.yaml
+  - constraints/deny-hostnetwork.yaml

@@ -19,9 +19,12 @@ spec:
       labels:
         app: api
     spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
       containers:
       - name: api
-        image: w10-api:0.0.1
+        image: ghcr.io/ThuyTrang9525/w10-api:0.0.2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
